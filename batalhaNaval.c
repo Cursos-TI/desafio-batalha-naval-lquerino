@@ -36,14 +36,12 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    
+// Variáveis inicias
 
-    int tabuleiro[10][10]; // declarado mas ainda não inicializado
+    int tabuleiro[10][10]; 
+    char* linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
 
-    char * linha[10] = {'A','B','C','D','E','F','G','H','I','J'}; // declarando letra das colunas
-
-
-    // Inicializando todo o tabuleiro com 0
+// For para inicialização da matriz
 
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
@@ -51,21 +49,20 @@ int main() {
         }
     }
 
-    // Exibindo o tabuleiro
+    // Impressão do tabuleiro
 
-    printf("=== Tabuleiro Batalha Naval (vazio) ===\n\n");
+    printf("=== *** Tabuleiro Batalha Naval *** ===\n\n");
 
     printf("     "); 
     for(int col = 0; col < 10; col++){
-        printf("%c ", linha[col]);  
+        printf("%c ", linha[col]); 
     };
 
     printf("\n");
 
-
     for (int i = 0; i < 10; i++) {
 
-        printf("%2d | ", i + 1); // numeração das linhas
+        printf("%2d | ", i + 1);
 
         for (int j = 0; j < 10; j++) {
             printf("%d ", tabuleiro[i][j]);
