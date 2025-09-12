@@ -36,5 +36,44 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    
+
+    int tabuleiro[10][10]; // declarado mas ainda não inicializado
+
+    char * linha[10] = {'A','B','C','D','E','F','G','H','I','J'}; // declarando letra das colunas
+
+
+    // Inicializando todo o tabuleiro com 0
+
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            tabuleiro[i][j] = 0;
+        }
+    }
+
+    // Exibindo o tabuleiro
+
+    printf("=== Tabuleiro Batalha Naval (vazio) ===\n\n");
+
+    printf("     "); 
+    for(int col = 0; col < 10; col++){
+        printf("%c ", linha[col]);  
+    };
+
+    printf("\n");
+
+
+    for (int i = 0; i < 10; i++) {
+
+        printf("%2d | ", i + 1); // numeração das linhas
+
+        for (int j = 0; j < 10; j++) {
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+
     return 0;
 }
+
