@@ -49,6 +49,21 @@ int main() {
         }
     }
 
+// Posicionamento dos Navios
+
+// Navio 1
+
+tabuleiro[1][1] = 3;
+tabuleiro[1][2] = 3;
+tabuleiro[1][3] = 3;
+
+// Navio 2
+
+tabuleiro[7][9] = 3;
+tabuleiro[8][9] = 3;
+tabuleiro[9][9] = 3;
+
+
     // Impressão do tabuleiro
 
     printf("=== *** Tabuleiro Batalha Naval *** ===\n\n");
