@@ -4,6 +4,9 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
+#define LINHA 10
+#define COLUNA 10
+
 int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
@@ -38,7 +41,7 @@ int main() {
 
 // Variáveis inicias
 
-    int tabuleiro[10][10]; 
+    int tabuleiro[LINHA][COLUNA]; 
     char* linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
 
 // For para inicialização da matriz
@@ -51,18 +54,30 @@ int main() {
 
 // Posicionamento dos Navios
 
-// Navio 1
+// Navio 1 - HORIZONTAL
 
-tabuleiro[1][1] = 3;
-tabuleiro[1][2] = 3;
-tabuleiro[1][3] = 3;
+for (int nv1 = 1; nv1 < 4; nv1++){
+        tabuleiro[2][nv1] = 3;
+}
 
-// Navio 2
+// Navio 2 - VERTICAL
 
-tabuleiro[7][9] = 3;
-tabuleiro[8][9] = 3;
-tabuleiro[9][9] = 3;
+for (int nv2 = 6; nv2 < 9; nv2++){
+        tabuleiro[nv2][9] = 3;
+}
 
+// Navio 3 - DIAGONAL 1
+
+for (int nv3_1 = 0, nv3_2 = 9; nv3_1 < 3 && nv3_2 > 6; nv3_1++, nv3_2--){
+    for (nv3_2 = 9; nv3_2 > 6; nv3_2--)
+    tabuleiro[nv3_1][nv3_2] = 3;
+}
+
+// Navio 4 - DIAGONAL 2
+
+for (int nv4_1 = 8, nv4_2 = 1; nv4_1 > 5 && nv4_2 < 4; nv4_1--, nv4_2++){
+    tabuleiro[nv4_1][nv4_2] = 3;
+}
 
     // Impressão do tabuleiro
 
